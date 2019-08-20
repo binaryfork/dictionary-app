@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Translate</string>
+    <string name="title_main">Translate</string>
+    <string name="title_favorites">Phrasebook</string>
+    <string name="hint_text_to_translate">Text for translation</string>
+    <string name="title_no_favorites">Tap the Star next to a translation to save it here</string>
+
+    <string name="search_title">Search</string>
+
+    <string name="error_description_no_internet">Check internet connection and try again</string>
+</resources>

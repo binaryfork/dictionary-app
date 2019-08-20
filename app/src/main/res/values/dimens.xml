@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="appbar_height">56dp</dimen>
+    <dimen name="margin_top_hint">60dp</dimen>
+    <dimen name="translation_layout_width">60dp</dimen>
+</resources>

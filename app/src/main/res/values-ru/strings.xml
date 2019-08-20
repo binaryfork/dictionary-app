@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Переводчик</string>
+    <string name="title_main">Перевод</string>
+    <string name="title_favorites">Разговорник</string>
+    <string name="hint_text_to_translate">Введите текст</string>
+    <string name="title_no_favorites">Нажмите на звездочку возле перевода, чтобы добавить его сюда</string>
+
+    <string name="search_title">Поиск</string>
+
+    <string name="error_description_no_internet">Проверьте подключение к интернету и повторите попытку</string>
+
+</resources>

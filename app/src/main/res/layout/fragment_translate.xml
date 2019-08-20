@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:tag="fragment_main">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/appbar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        app:title="@string/title_main"
+        app:titleTextColor="@android:color/white" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainAppBar"
+        android:indeterminate="true"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/selectLanguageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainAppBar"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/fromLanguageSpinner"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.5"
+            android:dropDownWidth="match_parent"
+            android:spinnerMode="dialog" />
+
+        <ImageButton
+            android:id="@+id/changeDirection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_change" />
+
+        <Spinner
+            android:id="@+id/toLanguageSpinner"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.5"
+            android:dropDownWidth="match_parent"
+            android:spinnerMode="dialog" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/textToTranslateContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectLanguageContainer"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/translate_container_normal"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/inputTextEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="@string/hint_text_to_translate"
+                android:minLines="2"
+                android:padding="8dp"
+                android:scrollbars="vertical"
+                android:selectAllOnFocus="false"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/clearButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/inputTextEt"
+                android:layout_alignParentRight="true"
+                android:background="?attr/selectableItemBackground"
+                android:src="@drawable/ic_clear"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/translationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/translatedTv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/favoriteCheckBox"
+                android:padding="8dp"
+                android:scrollbars="vertical"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/favoriteCheckBox"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="?attr/selectableItemBackground"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_star"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

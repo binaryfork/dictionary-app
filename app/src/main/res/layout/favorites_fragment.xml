@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bf.dict.ui.favorites.FavoritesFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/favoriteAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/appbar_height"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+        app:title="@string/title_favorites"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favoritesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/favoriteAppBar"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/favoritesEmptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/ic_star_hint"
+        android:gravity="center"
+        android:maxWidth="200dp"
+        android:text="@string/title_no_favorites"
+        android:textAppearance="@style/GreyText.16" />
+
+</RelativeLayout>
